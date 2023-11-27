@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Register = () => {
   const [email, setemail] = useState('');
   const [password, setPassword] = useState('');
+  console.log(localStorage.getItem('registeredEmail'));
+  console.log(localStorage.getItem('registeredPassword'));
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -13,8 +15,7 @@ const Register = () => {
     // Store the input values in local storage
     localStorage.setItem('registeredEmail', email);
     localStorage.setItem('registeredPassword', password);
-    console.log(localStorage.getItem('registeredEmail'));
-    console.log(localStorage.getItem('registeredPassword'));
+
 
 
 
